@@ -21,7 +21,12 @@ class VideoListViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         initVM()
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let playerViewController = segue.destination as? PlayerViewController, let indexPath = sender as?IndexPath {
+            playerViewController.playerViewModel = videoListViewModel.getPlayerViewModel(for: indexPath)
+        }
+    }
 
 }
 

@@ -34,7 +34,11 @@ class PlayerViewModel: NSObject {
                     player = THEOplayer()
                 }
                 self.attachEventListeners()
-                let source = SourceDescription(source: TypedSource(src: video.source, type: video.type))
+                var vr: VRConfiguration?
+                if let VR = video.VR, VR == true {
+                    vr = VRConfiguration(vr360: true)
+                }
+                let source = SourceDescription(source: TypedSource(src: video.source, type: video.type), vr: vr)
                 player.source = source
             }
         }
