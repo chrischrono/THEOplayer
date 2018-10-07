@@ -1,0 +1,6 @@
+[
+    {"title":"Video stream with subtitle","source":"https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8","type":"application/x-mpegurl"},
+    {"title":"Video stream with multiple audio tracks","source":"https://cdn.theoplayer.com/video/elephants-dream/playlist.m3u8","type":"application/x-mpegurl"},
+    {"title":"Picture-in-picture","source":"https://cdn.theoplayer.com/video/sintel/index.m3u8","type":"application/x-mpegurl","PiP":true},
+    {"title":"Video with 360/VR feature","source":"https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8","type":"application/x-mpegurl","VR":true}
+]
