@@ -24,6 +24,8 @@
 		AAA4159A216A3BBC00B3CBE5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA41599216A3BBC00B3CBE5 /* Helpers.swift */; };
 		AAA4159C216A3C6F00B3CBE5 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4159B216A3C6F00B3CBE5 /* PlayerViewController.swift */; };
 		AAA4159E216A3FC500B3CBE5 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4159D216A3FC500B3CBE5 /* PlayerViewModel.swift */; };
+		AAA415A1216A443B00B3CBE5 /* VideoDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4159F216A443B00B3CBE5 /* VideoDataSourceTest.swift */; };
+		AAA415A2216A443B00B3CBE5 /* VideoListVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA415A0216A443B00B3CBE5 /* VideoListVMTest.swift */; };
 		CDDA10932EC46DAD80FD39A8 /* Pods_THEOplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B6B44E5C8A5376EABB678D /* Pods_THEOplayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		AAA41599216A3BBC00B3CBE5 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		AAA4159B216A3C6F00B3CBE5 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		AAA4159D216A3FC500B3CBE5 /* PlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		AAA4159F216A443B00B3CBE5 /* VideoDataSourceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDataSourceTest.swift; sourceTree = "<group>"; };
+		AAA415A0216A443B00B3CBE5 /* VideoListVMTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoListVMTest.swift; sourceTree = "<group>"; };
 		C9B6B44E5C8A5376EABB678D /* Pods_THEOplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_THEOplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79873DC8563ECA144F988AC /* Pods-THEOplayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-THEOplayerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-THEOplayerTests/Pods-THEOplayerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +156,8 @@
 			children = (
 				AAA4157A216A36F100B3CBE5 /* THEOplayerTests.swift */,
 				AAA4157C216A36F100B3CBE5 /* Info.plist */,
+				AAA4159F216A443B00B3CBE5 /* VideoDataSourceTest.swift */,
+				AAA415A0216A443B00B3CBE5 /* VideoListVMTest.swift */,
 			);
 			path = THEOplayerTests;
 			sourceTree = "<group>";
@@ -443,7 +449,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA415A1216A443B00B3CBE5 /* VideoDataSourceTest.swift in Sources */,
 				AAA4157B216A36F100B3CBE5 /* THEOplayerTests.swift in Sources */,
+				AAA415A2216A443B00B3CBE5 /* VideoListVMTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
