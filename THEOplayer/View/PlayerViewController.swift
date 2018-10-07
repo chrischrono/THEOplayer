@@ -49,6 +49,9 @@ extension PlayerViewController {
         playerViewModel.updateSizeClosure = {(height: CGFloat)->() in
             self.playerPanelHeightConstraint.constant = height
         }
+        playerViewModel.pictureInPictureClosure = {()->() in
+            self.contentViewHeightConstraint.constant = self.contentScrollView.bounds.height * 2
+        }
     }
 }
 

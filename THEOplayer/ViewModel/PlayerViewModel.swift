@@ -19,12 +19,21 @@ class PlayerViewModel: NSObject {
     
     /** Closure to update the player view's height */
     var updateSizeClosure: ((CGFloat)->())?
+    /** Closure to simulate longer scrollview to test Picture-in-Picture mode */
+    var pictureInPictureClosure: (()->())?
     
     /** videoContent that upon setting will configure the THEOplayer */
     var video: Video? {
         didSet{
             if let video = video {
-                player = THEOplayer()
+                if let pipMode = video.PiP, pipMode == true {
+                    let playerConfig = THEOplayerConfiguration(pictureInPicture: true)
+                    player = THEOplayer(configuration: playerConfig)
+                    player.pip!.configure(movable: false, defaultCorner: .bottomLeft, scale: 0.5)
+                } else {
+                    player = THEOplayer()
+                }
+                self.attachEventListeners()
                 let source = SourceDescription(source: TypedSource(src: video.source, type: video.type))
                 player.source = source
             }
@@ -62,6 +71,9 @@ extension PlayerViewModel {
         onResize = {(event: EventProtocol)->() in
             print("onResize event occured")
             self.updateSizeClosure?(self.player.bounds.height)
+            if let _ = self.video!.PiP {
+                self.pictureInPictureClosure?()
+            }
         }
         listeners["resize"] = player.addEventListener(type: PlayerEventTypes.RESIZE, listener: onResize!)
     }
