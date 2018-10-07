@@ -63,10 +63,74 @@
                     <navigationItem key="navigationItem" title="Video List" id="aRV-gp-yfL"/>
                     <connections>
                         <outlet property="videosTableView" destination="99A-iP-DtT" id="g4v-mn-Fhz"/>
+                        <segue destination="hfx-8e-ckt" kind="show" identifier="playerSegue" id="Bo0-4W-5Tc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135" y="134"/>
+        </scene>
+        <!--Player-->
+        <scene sceneID="wic-Wv-n7C">
+            <objects>
+                <viewController title="Player" id="hfx-8e-ckt" customClass="PlayerViewController" customModule="THEOplayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dgc-mB-Z03">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIp-Zy-adf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFX-zs-wV1">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJv-pb-6pu">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="281"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="281" id="Ch4-0F-z0Q"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="DJv-pb-6pu" firstAttribute="leading" secondItem="VFX-zs-wV1" secondAttribute="leading" id="JfU-Xd-Kjp"/>
+                                            <constraint firstAttribute="height" constant="603" id="vRU-fH-jMn"/>
+                                            <constraint firstItem="DJv-pb-6pu" firstAttribute="width" secondItem="VFX-zs-wV1" secondAttribute="width" id="x8o-sM-gz2"/>
+                                            <constraint firstItem="DJv-pb-6pu" firstAttribute="top" secondItem="VFX-zs-wV1" secondAttribute="top" id="yjo-uB-YdG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VFX-zs-wV1" firstAttribute="width" secondItem="nIp-Zy-adf" secondAttribute="width" id="7sg-fq-gQb"/>
+                                    <constraint firstAttribute="bottom" secondItem="VFX-zs-wV1" secondAttribute="bottom" id="Dew-Ka-YTf"/>
+                                    <constraint firstAttribute="trailing" secondItem="VFX-zs-wV1" secondAttribute="trailing" id="V9h-aH-Xbf"/>
+                                    <constraint firstItem="VFX-zs-wV1" firstAttribute="centerX" secondItem="nIp-Zy-adf" secondAttribute="centerX" id="WfI-Ad-lxP"/>
+                                    <constraint firstItem="VFX-zs-wV1" firstAttribute="top" secondItem="nIp-Zy-adf" secondAttribute="top" id="mNd-nw-fKc"/>
+                                    <constraint firstItem="VFX-zs-wV1" firstAttribute="leading" secondItem="nIp-Zy-adf" secondAttribute="leading" id="wGh-yJ-u8e"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nIp-Zy-adf" firstAttribute="centerX" secondItem="A9a-tg-m5o" secondAttribute="centerX" id="5uL-Qm-VeP"/>
+                            <constraint firstItem="nIp-Zy-adf" firstAttribute="width" secondItem="A9a-tg-m5o" secondAttribute="width" id="UPz-gA-r2N"/>
+                            <constraint firstItem="nIp-Zy-adf" firstAttribute="height" secondItem="A9a-tg-m5o" secondAttribute="height" id="XSx-to-a9y"/>
+                            <constraint firstItem="nIp-Zy-adf" firstAttribute="centerY" secondItem="A9a-tg-m5o" secondAttribute="centerY" id="eN1-1P-Qtx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A9a-tg-m5o"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentScrollView" destination="nIp-Zy-adf" id="aPE-r7-qVJ"/>
+                        <outlet property="contentView" destination="VFX-zs-wV1" id="922-BV-cW5"/>
+                        <outlet property="contentViewHeightConstraint" destination="vRU-fH-jMn" id="u0L-P5-RoS"/>
+                        <outlet property="playerPanel" destination="DJv-pb-6pu" id="b3E-2V-WM4"/>
+                        <outlet property="playerPanelHeightConstraint" destination="Ch4-0F-z0Q" id="AvZ-IA-uFe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddt-6N-jxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="134"/>
         </scene>
     </scenes>
 </document>
