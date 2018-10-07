@@ -10,7 +10,7 @@ import UIKit
 
 class VideoListViewModel: NSObject {
     /** hold the videoList */
-    var videoDataSource: VideoDataSource?
+    weak var videoDataSource: VideoDataSource?
     
     /**
      Initialize with dataSource
