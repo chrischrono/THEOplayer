@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  VideoListViewController.swift
 //  THEOplayer
 //
 //  Created by Christian  Huang on 07/10/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class VideoListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
