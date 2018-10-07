@@ -43,7 +43,7 @@ extension VideoListViewController {
 // MARK: - UITableViewDelegate
 extension VideoListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //performSegue(withIdentifier: "playerSegue", sender: indexPath)
+        performSegue(withIdentifier: "playerSegue", sender: indexPath)
     }
 }
 

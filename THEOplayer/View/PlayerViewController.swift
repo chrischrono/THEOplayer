@@ -9,6 +9,8 @@
 import UIKit
 
 class PlayerViewController: UIViewController {
+    /** view model that handle the communication from video content to player. */
+    var playerViewModel: PlayerViewModel!
     
     /** scroll view that hold all the views. */
     @IBOutlet weak var contentScrollView: UIScrollView!
@@ -24,11 +26,29 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.layoutIfNeeded()
+        initVM()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        if self.isMovingFromParent {
+            playerViewModel.stopPlayer()
+        }
     }
     
+}
+
+// MARK: - View Model
+extension PlayerViewController {
+    /**
+     Initialize the view model
+     */
+    func initVM() {
+        print("player width: \(playerPanel.bounds.width)")
+        playerViewModel.playerPanel = playerPanel
+        playerViewModel.updateSizeClosure = {(height: CGFloat)->() in
+            self.playerPanelHeightConstraint.constant = height
+        }
+    }
 }
 

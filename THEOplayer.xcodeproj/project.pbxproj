@@ -23,6 +23,7 @@
 		AAA41597216A3B8900B3CBE5 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA41595216A3B8900B3CBE5 /* Dynamic.swift */; };
 		AAA4159A216A3BBC00B3CBE5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA41599216A3BBC00B3CBE5 /* Helpers.swift */; };
 		AAA4159C216A3C6F00B3CBE5 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4159B216A3C6F00B3CBE5 /* PlayerViewController.swift */; };
+		AAA4159E216A3FC500B3CBE5 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4159D216A3FC500B3CBE5 /* PlayerViewModel.swift */; };
 		CDDA10932EC46DAD80FD39A8 /* Pods_THEOplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B6B44E5C8A5376EABB678D /* Pods_THEOplayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		AAA41595216A3B8900B3CBE5 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		AAA41599216A3BBC00B3CBE5 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		AAA4159B216A3C6F00B3CBE5 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		AAA4159D216A3FC500B3CBE5 /* PlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		C9B6B44E5C8A5376EABB678D /* Pods_THEOplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_THEOplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79873DC8563ECA144F988AC /* Pods-THEOplayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-THEOplayerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-THEOplayerTests/Pods-THEOplayerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +179,7 @@
 			children = (
 				AAA41590216A3B4B00B3CBE5 /* VideoDataSource.swift */,
 				AAA41591216A3B4B00B3CBE5 /* VideoListViewModel.swift */,
+				AAA4159D216A3FC500B3CBE5 /* PlayerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA4159E216A3FC500B3CBE5 /* PlayerViewModel.swift in Sources */,
 				AAA41568216A36ED00B3CBE5 /* VideoListViewController.swift in Sources */,
 				AAA4159C216A3C6F00B3CBE5 /* PlayerViewController.swift in Sources */,
 				AAA4159A216A3BBC00B3CBE5 /* Helpers.swift in Sources */,
@@ -601,7 +605,10 @@
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
 				INFOPLIST_FILE = THEOplayer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.inovidea.THEOplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -621,7 +628,10 @@
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
 				INFOPLIST_FILE = THEOplayer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.inovidea.THEOplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -638,7 +648,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X5UG5NGMS;
 				INFOPLIST_FILE = THEOplayerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.inovidea.THEOplayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -656,7 +670,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X5UG5NGMS;
 				INFOPLIST_FILE = THEOplayerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.inovidea.THEOplayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

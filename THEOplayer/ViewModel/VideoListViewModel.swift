@@ -34,4 +34,16 @@ extension VideoListViewModel {
             }
         }
     }
+    
+    /**
+     Generate PlayerViewModel for selected Video
+     - Parameter indexPath: selected index of video data from videoList .
+     */
+    func getPlayerViewModel(for indexPath: IndexPath) -> PlayerViewModel {
+        let playerVM = PlayerViewModel()
+        if let dataSource = videoDataSource {
+            playerVM.video = dataSource.videos.value[indexPath.row]
+        }
+        return playerVM
+    }
 }
