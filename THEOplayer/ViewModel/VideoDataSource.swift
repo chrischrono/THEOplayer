@@ -11,7 +11,7 @@ import UIKit
 /** Class that hold videoList and also handle the UITableViewDataSource */
 class VideoDataSource: NSObject, UITableViewDataSource {
     /** hold the videoList */
-    var videos: Dynamic<[Video]> = Dynamic([])
+    let videos: Dynamic<[Video]> = Dynamic([])
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videos.value.count

@@ -12,7 +12,7 @@ class VideoListViewController: UIViewController {
     /** to show all avaliable video */
     @IBOutlet weak var videosTableView: UITableView!
     /** data source for the tableView */
-    var videoDataSource = VideoDataSource()
+    let videoDataSource = VideoDataSource()
     /** view model that handle the communication fom data to view */
     var videoListViewModel: VideoListViewModel!
     
